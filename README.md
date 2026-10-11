@@ -36,6 +36,17 @@ npm test
 
 Требуется Node.js 22.13+ (встроенный `node:sqlite`).
 
+## Установка на VPS (Beget VPS, Ubuntu)
+
+Домен (например `calc.sk-krd.ru`) должен указывать A-записью на IP сервера. На сервере от root:
+
+```
+curl -fsSL https://raw.githubusercontent.com/Shamaich011/stroy-komfort-quiz/claude/apartment-repair-cost-calc-yty2dt/deploy/install.sh | bash -s -- calc.sk-krd.ru
+```
+
+Скрипт ставит Node.js и Caddy (HTTPS), запускает приложение как службу и печатает пароль админки.
+Повторный запуск той же команды обновляет код; заявки и пароль сохраняются.
+
 ## Перед боевым запуском
 
 - Перенести сервер в российское облако (152-ФЗ: персональные данные граждан РФ хранятся в РФ).
