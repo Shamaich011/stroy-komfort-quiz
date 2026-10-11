@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Калькулятор ремонта — Строй Комфорт</title>
+<meta name="description" content="Рассчитайте стоимость ремонта квартиры в Краснодаре: материалы, работы и визуализация результата.">
+<meta name="theme-color" content="#21212D">
+<link rel="icon" href="/static/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <a class="brand-left" href="/">
+      <img src="/static/logo.jpg" alt="Строй Комфорт">
+      <span class="word">Строй Комфорт<small>Люди — важнее денег</small></span>
+    </a>
+    <span class="chip">Краснодар</span>
+  </header>
+
+  <div class="card">
+    <h1>Калькулятор ремонта квартиры</h1>
+    <p class="muted" style="margin:8px 0 0">Укажите помещения и выберите отделку — смета с материалами и работами пересчитывается сразу.</p>
+  </div>
+
+  <div id="app"><div class="card">Загрузка…</div></div>
+  <p class="foot">Предварительный расчёт · точная смета после бесплатного замера</p>
+</div>
+
+<div class="bar" id="bar">
+  <div class="bar-in">
+    <div>
+      <div class="sum" id="barSum">—</div>
+      <div class="sub" id="barSub">Считаем…</div>
+    </div>
+    <button class="btn" id="barBtn">Смета</button>
+  </div>
+</div>
+
+<script src="/static/viz.js"></script>
+<script src="/static/calc.js"></script>
+</body>
+</html>

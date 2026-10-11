@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Админка — Строй Комфорт</title>
+<link rel="icon" href="/static/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<style>
+  .wrap { max-width: 960px; padding-bottom: 40px; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .lead { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 3px; padding: 14px 16px; margin-bottom: 10px; }
+  .lead-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: center; }
+  .lead .who { font-weight: 600; }
+  .money { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+  .money b { font-family: 'Oswald', sans-serif; font-size: 17px; }
+  .profit { color: var(--ok); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: 14px; }
+  .stat b { display: block; font-family: 'Oswald', sans-serif; font-size: 24px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+  th { font-family: 'Oswald', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 11px; letter-spacing: .05em; color: var(--navy-soft); }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .scroll { overflow-x: auto; }
+  .inp.price { width: 110px; text-align: right; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 6px; border-radius: 2px; background: var(--grid); color: var(--navy-soft); }
+  .badge.warn { background: #FFF4CC; color: #8a6d00; }
+  .saved { color: var(--ok); font-size: 12px; }
+  select.inp { width: auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <a class="brand-left" href="/">
+      <img src="/static/logo.jpg" alt="Строй Комфорт">
+      <span class="word">Строй Комфорт<small>Админка</small></span>
+    </a>
+    <button class="btn ghost sm hidden" id="logout">Выйти</button>
+  </header>
+  <div id="app"><div class="card">Загрузка…</div></div>
+</div>
+<script src="/static/admin.js"></script>
+</body>
+</html>

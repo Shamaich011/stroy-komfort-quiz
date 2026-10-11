@@ -345,7 +345,7 @@ function renderQuestion(){
       <h2>${q.q}</h2>
       <div class="options">${opts}</div>
     </div>
-    <p class="foot">Бесплатный расчёт · без обязательств</p>
+    <p class="foot">Бесплатный расчёт · без обязательств${step === 0 ? ' · <a href="/calc" style="color:var(--gold-deep)">Подробный калькулятор с материалами →</a>' : ''}</p>
   `;
   document.querySelectorAll('.opt').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -378,6 +378,11 @@ function renderContactForm(){
         <input id="phoneInput" type="tel" placeholder="+7 900 000 00 00">
       </div>
       <p class="err" id="phoneErr">Введите телефон</p>
+      <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--navy-soft);margin:4px 0 12px;cursor:pointer">
+        <input id="consentInput" type="checkbox" style="width:18px;height:18px;margin:0;accent-color:var(--navy)">
+        Согласен на обработку персональных данных для связи со мной по расчёту
+      </label>
+      <p class="err" id="consentErr">Нужно согласие на обработку данных</p>
       <button class="submit" id="submitBtn">Получить расчёт</button>
     </div>
     <p class="foot">Специалист свяжется в течение 15 минут</p>
@@ -396,19 +401,28 @@ async function onSubmit(){
   let ok = true;
   if(name.length < 2){ nameErr.style.display='block'; ok=false; } else { nameErr.style.display='none'; }
   if(phone.replace(/\D/g,'').length < 10){ phoneErr.style.display='block'; ok=false; } else { phoneErr.style.display='none'; }
+  const consent = document.getElementById('consentInput').checked;
+  document.getElementById('consentErr').style.display = consent ? 'none' : 'block';
+  if(!consent) ok=false;
   if(!ok) return;
 
   const submitBtn = document.getElementById('submitBtn');
   submitBtn.disabled = true;
   submitBtn.textContent = 'Отправляем…';
 
-  const lead = { name, phone, ...answers, submittedAt: new Date().toISOString() };
-  const id = 'lead:' + Date.now() + ':' + Math.random().toString(36).slice(2,7);
-
   try{
-    await window.storage.set(id, JSON.stringify(lead), true);
+    const res = await fetch('/api/quiz-leads', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ name, phone, consent:true, answers })
+    });
+    if(!res.ok) throw new Error((await res.json().catch(()=>({}))).error || 'Ошибка отправки');
   }catch(e){
-    console.error('Storage error', e);
+    console.error('Lead error', e);
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Получить расчёт';
+    phoneErr.textContent = e.message || 'Не удалось отправить, попробуйте ещё раз';
+    phoneErr.style.display = 'block';
+    return;
   }
   step = QUESTIONS.length + 1;
   render();
@@ -421,6 +435,7 @@ function renderDone(){
       <div class="done-screen">
         <div class="stamp"><span>Заявка<br>принята</span></div>
         <p>Специалист свяжется с вами в течение 15 минут и пришлёт точный расчёт по вашим параметрам.</p>
+        <p style="margin-top:18px"><a class="submit" style="display:inline-block;width:auto;padding:13px 20px;text-decoration:none" href="/calc">Посчитать смету самому</a></p>
       </div>
     </div>
   `;
@@ -432,40 +447,7 @@ function render(){
   else renderDone();
 }
 
-async function renderAdmin(){
-  app.innerHTML = `<div class="admin"><h1>Заявки — Строй Комфорт</h1><p class="sub">Загрузка…</p></div>`;
-  let keys = [];
-  try{
-    const res = await window.storage.list('lead:', true);
-    keys = res ? res.keys : [];
-  }catch(e){ console.error(e); }
-
-  if(!keys.length){
-    app.innerHTML = `<div class="admin"><h1>Заявки — Строй Комфорт</h1><p class="empty">Пока нет заявок.</p></div>`;
-    return;
-  }
-
-  const leads = [];
-  for(const k of keys){
-    try{
-      const r = await window.storage.get(k, true);
-      if(r) leads.push(JSON.parse(r.value));
-    }catch(e){ /* skip */ }
-  }
-  leads.sort((a,b)=> new Date(b.submittedAt) - new Date(a.submittedAt));
-
-  const rows = leads.map(l => `
-    <div class="lead">
-      <div class="name">${escapeHtml(l.name || '—')} · ${escapeHtml(l.phone || '—')}</div>
-      <div class="meta">${new Date(l.submittedAt).toLocaleString('ru-RU')}</div>
-      <div>${escapeHtml(l.object||'—')} · ${escapeHtml(l.area||'—')} · ${escapeHtml(l.type||'—')} · ${escapeHtml(l.budget||'—')} · ${escapeHtml(l.timing||'—')}</div>
-    </div>
-  `).join('');
-
-  app.innerHTML = `<div class="admin"><h1>Заявки — Строй Комфорт</h1><p class="sub">Всего заявок: ${leads.length}</p>${rows}</div>`;
-}
-
-if(isAdmin){ renderAdmin(); } else { render(); }
+if(isAdmin){ location.href = '/admin'; } else { render(); }
 </script>
 </body>
 </html>
