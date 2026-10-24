@@ -1,0 +1,80 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="fonts.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F7F6F2;--ink:#14141C;--mut:#62636F;--y:#F3CC02;--line:#E4E2DA}
+body{background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif}
+.w{max-width:1280px;margin:0 auto;padding:0 32px}
+header{display:flex;justify-content:space-between;align-items:center;height:84px}
+.logo{font-weight:800;font-size:20px;display:flex;gap:10px;align-items:center}.logo i{width:12px;height:12px;border-radius:50%;background:var(--y);box-shadow:0 0 0 4px #F3CC0255}
+.nav{display:flex;gap:28px;font-weight:600;font-size:15px;color:var(--mut)}
+.tel{font-weight:800}.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:14px;padding:18px 26px;font-weight:700;font-size:16px}
+.btn.y{background:var(--y);color:var(--ink)}
+.crumbs{font-size:13px;color:var(--mut);padding-top:10px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;padding:36px 0 80px;align-items:center}
+h1{font-weight:800;font-size:72px;line-height:1.02;letter-spacing:-2.5px}
+h1 mark{background:linear-gradient(transparent 62%,var(--y) 62%);color:inherit;padding:0 4px}
+.lead{font-size:20px;line-height:1.6;color:var(--mut);margin:26px 0 34px;max-width:540px}
+.trust{display:flex;gap:26px;margin-top:34px;font-size:14px;color:var(--mut)}.trust b{display:block;font-size:22px;color:var(--ink)}
+.hp{position:relative;height:600px}
+.hp .m{position:absolute;inset:0 0 70px 0;border-radius:28px;background:url(img/7c98523a.jpg) center/cover}
+.calc{position:absolute;left:-50px;bottom:0;width:360px;background:#fff;border-radius:24px;padding:24px;box-shadow:0 30px 70px rgba(20,20,28,.16)}
+.calc small{color:var(--mut);font-size:13px;font-weight:600}.calc h3{font-size:20px;margin:6px 0 14px}
+.rng{height:8px;border-radius:9px;background:#EEECE4;position:relative;margin:18px 0 8px}.rng i{position:absolute;left:0;top:0;bottom:0;width:46%;background:var(--ink);border-radius:9px}.rng b{position:absolute;left:46%;top:50%;width:24px;height:24px;margin:-12px;border-radius:50%;background:var(--y);border:4px solid var(--ink)}
+.calc .r{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.calc .sum{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}.sum b{font-size:22px}
+section{padding:90px 0 0}
+h2{font-weight:800;font-size:48px;letter-spacing:-1.5px;line-height:1.08}
+.sub2{color:var(--mut);font-size:18px;margin-top:12px}
+.price{margin-top:40px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
+.pr{display:grid;grid-template-columns:1.4fr 2fr 1fr .9fr;padding:24px 28px;border-top:1px solid var(--line);align-items:center;font-size:16px}
+.pr:first-child{border:0;background:#FBFAF6;font-size:13px;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:16px 28px}
+.pr b{font-size:18px}.pr .p{font-weight:800;font-size:20px}.pr .a{justify-self:end;font-weight:700;font-size:14px;border:1.5px solid var(--ink);border-radius:10px;padding:10px 14px}
+.pr.hl{background:#FFFBE3}
+.works{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px;margin-top:40px}
+.wk{border-radius:22px;background-size:cover;background-position:center;position:relative}
+.wk span{position:absolute;left:14px;bottom:14px;background:#fff;border-radius:10px;padding:8px 12px;font-weight:700;font-size:13px}
+.k1{grid-row:span 2;background-image:url(img/f325e595.jpg)}.k2{background-image:url(img/d76b414f.jpg);background-position:center 30%}.k3{background-image:url(img/a56d52aa.jpg)}.k4{grid-column:span 2;background-image:url(img/9c288397.jpg)}
+.faq{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;margin-top:10px}
+.q{border-top:1px solid var(--line);padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-weight:700;font-size:18px}
+.q:last-child{border-bottom:1px solid var(--line)}.q i{font-style:normal;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none}
+.q.o{flex-direction:column}.q.o p{font-weight:500;color:var(--mut);font-size:16px;line-height:1.6}.q.o i{background:var(--y);border-color:var(--y)}
+.geo{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.geo span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:12px 18px;font-weight:600;font-size:15px}
+.cta{margin:90px 0 0;background:var(--ink);color:#fff;border-radius:32px;padding:56px;display:flex;justify-content:space-between;align-items:center}
+.cta h2{font-size:44px}.cta p{color:#B4B3C0;margin-top:10px;font-size:17px}
+footer{padding:50px 0;display:flex;justify-content:space-between;color:var(--mut);font-size:14px}
+.bar{display:none}
+@media(max-width:600px){
+.w{padding:0 18px}.nav,.hdbtn{display:none!important}header{height:64px}
+.hero{grid-template-columns:1fr;gap:26px;padding:14px 0 40px}
+h1{font-size:38px;letter-spacing:-1.2px}.lead{font-size:16px;margin:16px 0 22px}
+.btn{width:100%;justify-content:center;padding:17px}.trust{gap:16px;flex-wrap:wrap}.trust b{font-size:18px}
+.hp{height:420px}.hp .m{inset:0 0 120px 0}.calc{left:12px;right:12px;width:auto}
+section{padding:56px 0 0}h2{font-size:30px}
+.pr{grid-template-columns:1fr auto;gap:6px;padding:18px}.pr:first-child{display:none}.pr span.d{grid-column:1/-1;color:var(--mut);font-size:14px;order:3}.pr .a{display:none}
+.works{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}.k1{grid-column:span 2;grid-row:span 1}.k4{grid-column:span 2}
+.faq{grid-template-columns:1fr;gap:10px}.q{font-size:16px}
+.cta{flex-direction:column;align-items:flex-start;gap:22px;padding:30px}.cta h2{font-size:28px}
+footer{flex-direction:column;gap:8px;padding:30px 0 100px}
+.bar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;background:#fff;border-radius:18px;padding:8px;box-shadow:0 10px 40px rgba(0,0,0,.2)}
+.bar span{text-align:center;padding:13px 0;border-radius:12px;font-weight:700;font-size:14px;background:#F2F1EC}.bar span:last-child{background:var(--y)}
+}
+</style></head><body>
+<div class="w"><header><div class="logo"><i></i>Строй Комфорт</div><nav class="nav"><span>Цены</span><span>Работы</span><span>Вопросы</span><span>Контакты</span></nav><div style="display:flex;gap:20px;align-items:center" class="hdbtn"><span class="tel">+7 900 000 00 00</span><span class="btn">Заказать замер</span></div></header>
+<div class="crumbs">Главная › Ремонт квартир в Краснодаре</div>
+<div class="hero"><div><h1>Ремонт квартир <mark>под ключ</mark> в Краснодаре</h1><p class="lead">Черновая и чистовая отделка, электрика, сантехника и мебель — одна команда и одна смета, которая не растёт.</p><span class="btn y">Рассчитать стоимость →</span>
+<div class="trust"><div><b>Смета</b>в договоре</div><div><b>Фотоотчёт</b>каждый день</div><div><b>Гарантия</b>на работы</div></div></div>
+<div class="hp"><div class="m"></div><div class="calc"><small>Быстрый расчёт</small><h3>Площадь квартиры: 54 м²</h3><div class="rng"><i></i><b></b></div><div class="r"><span>20 м²</span><span>120 м²</span></div><div class="sum"><span style="color:#62636F;font-size:14px">Под ключ, ориентир</span><b>от X XXX XXX ₽</b></div></div></div></div></div>
+<div class="w"><section><h2>Цены на ремонт квартир в Краснодаре</h2><p class="sub2">Цена за м² с работой. Материалы считаем отдельно и прозрачно.</p>
+<div class="price"><div class="pr"><span>Вид ремонта</span><span>Что входит</span><span>Цена</span><span></span></div>
+<div class="pr"><b>Косметический</b><span class="d">Стены, пол, потолок, замена розеток</span><span class="p">от X XXX ₽</span><span class="a">Подробнее</span></div>
+<div class="pr hl"><b>Капитальный</b><span class="d">Электрика, сантехника, стяжка, выравнивание</span><span class="p">от X XXX ₽</span><span class="a">Подробнее</span></div>
+<div class="pr"><b>Под ключ</b><span class="d">Всё выше + мебель, свет и клининг</span><span class="p">от X XXX ₽</span><span class="a">Подробнее</span></div>
+<div class="pr"><b>Санузел</b><span class="d">Плитка, инсталляция, тёплый пол</span><span class="p">от XXX XXX ₽</span><span class="a">Подробнее</span></div></div></section>
+<section><h2>Наши работы</h2><div class="works"><div class="wk k1"><span>Спальня · ЖК «Образцово»</span></div><div class="wk k2"><span>Детская</span></div><div class="wk k3"><span>Ванная</span></div><div class="wk k4"><span>Шкаф-купе в нишу</span></div></div></section>
+<section class="faq"><div><h2>Частые вопросы</h2><p class="sub2">Не нашли ответ — напишите в WhatsApp.</p></div><div>
+<div class="q o"><span style="display:flex;justify-content:space-between;width:100%">Сколько стоит ремонт однокомнатной квартиры? <i>−</i></span><p>Зависит от площади и вида ремонта. Пройдите расчёт на сайте — пришлём смету с ценой за каждый этап.</p></div>
+<div class="q">Сколько длится ремонт под ключ? <i>+</i></div><div class="q">Можно ли закупать материалы самому? <i>+</i></div><div class="q">Работаете по договору? <i>+</i></div></div></section>
+<section><h2>Работаем по всему Краснодару</h2><div class="geo"><span>ЖК «Образцово»</span><span>Фестивальный</span><span>Юбилейный</span><span>ГМР</span><span>КМР</span><span>Центр</span><span>Прикубанский округ</span><span>Пригород</span></div></section>
+<div class="cta"><div><h2>Узнайте цену за 1 минуту</h2><p>5 вопросов — смета в WhatsApp или Telegram</p></div><span class="btn y">Пройти расчёт →</span></div>
+<footer><span>© Строй Комфорт · Краснодар · +7 900 000 00 00</span><span>Вариант F · «Минимал Pro»</span></footer></div>
+<div class="bar"><span>📞 Звонок</span><span>WhatsApp</span><span>Расчёт</span></div>
+</body></html>

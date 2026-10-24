@@ -1,0 +1,98 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><link rel="stylesheet" href="fonts.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;background:#09090E;color:#F5F3EC;font-family:Inter,sans-serif;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.55;z-index:0}
+.b1{width:720px;height:720px;background:#F3CC02;left:-200px;top:-260px;opacity:.38}
+.b2{width:620px;height:620px;background:#3B4BFF;right:-160px;top:120px;opacity:.35}
+.b3{width:560px;height:560px;background:#FF7A1A;left:420px;top:1500px;opacity:.22}
+.b4{width:700px;height:700px;background:#3B4BFF;left:-200px;top:2400px;opacity:.25}
+.noise{position:absolute;inset:0;z-index:1;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.z{position:relative;z-index:2}
+.glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(24px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 30px 80px rgba(0,0,0,.35)}
+nav{margin:28px 48px 0;height:72px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 28px}
+.logo{font-family:Unbounded;font-weight:700;font-size:19px;display:flex;align-items:center;gap:10px}
+.mark{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 200deg,#F3CC02,#FF7A1A,#F3CC02);display:grid;place-items:center;color:#09090E;font-size:16px;font-weight:900}
+.menu{display:flex;gap:6px;font-size:14px}.menu span{padding:10px 16px;border-radius:12px;color:#C9C7D6}.menu span:first-child{background:rgba(255,255,255,.08);color:#fff}
+.cta{background:linear-gradient(135deg,#FFE04A,#F3CC02 50%,#FFB020);color:#09090E;font-weight:800;border-radius:16px;padding:16px 26px;font-size:15px;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 12px 40px rgba(243,204,2,.45)}
+.hero{padding:70px 48px 0;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:99px;padding:8px 8px 8px 18px;font-size:14px;color:#E6E4DA}
+.pill b{background:#F3CC02;color:#09090E;border-radius:99px;padding:6px 12px;font-size:12px}
+.mega{font-family:Unbounded;font-weight:900;font-size:232px;line-height:.86;letter-spacing:-10px;margin-top:26px;background:url(img/7c98523a.jpg) center 60%/120% auto;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 60px rgba(0,0,0,.5))}
+.sub{font-family:Unbounded;font-weight:500;font-size:44px;letter-spacing:-1px;margin-top:6px}
+.sub em{font-style:normal;background:linear-gradient(90deg,#FFE04A,#FF9A2A);-webkit-background-clip:text;color:transparent}
+.lead{font-size:19px;color:#B6B4C4;max-width:620px;margin:22px auto 0;line-height:1.55}
+.row{display:flex;gap:12px;justify-content:center;margin-top:34px}
+.ghost{border-radius:16px;padding:16px 26px;font-size:15px;font-weight:600}
+.stage{position:relative;height:620px;margin:70px 48px 0}
+.shot{position:absolute;left:150px;right:150px;top:0;bottom:0;border-radius:40px;background:url(img/f325e595.jpg) center/cover;box-shadow:0 60px 120px rgba(0,0,0,.6)}
+.shot::after{content:"";position:absolute;inset:0;border-radius:40px;background:linear-gradient(180deg,rgba(9,9,14,0) 50%,rgba(9,9,14,.7));border:1px solid rgba(255,255,255,.12)}
+.fc{position:absolute;border-radius:24px;padding:20px 22px;z-index:3}
+.f1{left:40px;top:70px;width:300px}.f1 small{color:#B6B4C4;font-size:13px}.f1 .big{font-family:Unbounded;font-size:30px;margin:6px 0 12px}
+.bar{height:8px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}.bar i{display:block;height:100%;width:78%;background:linear-gradient(90deg,#F3CC02,#FF8A1A)}
+.f1 .row2{display:flex;justify-content:space-between;font-size:12px;color:#B6B4C4;margin-top:8px}
+.f2{right:40px;top:40px;width:290px;display:flex;gap:14px;align-items:center}
+.av{width:52px;height:52px;border-radius:16px;background:url(img/a56d52aa.jpg) center/cover;flex:none}.f2 b{display:block;font-size:15px}.f2 span{font-size:13px;color:#B6B4C4}
+.live{width:9px;height:9px;border-radius:50%;background:#3DFF8F;box-shadow:0 0 12px #3DFF8F;display:inline-block;margin-right:6px}
+.f3{right:90px;bottom:50px;width:330px}.f3 small{font-size:13px;color:#B6B4C4}.f3 .q{font-family:Unbounded;font-size:19px;margin:8px 0 14px}
+.ch{display:flex;gap:8px}.ch span{flex:1;text-align:center;padding:12px 0;border-radius:12px;background:rgba(255,255,255,.08);font-size:13px;font-weight:600}.ch span.on{background:#F3CC02;color:#09090E}
+.f4{left:110px;bottom:40px;display:flex;gap:10px;align-items:center;padding:14px 20px}.f4 b{font-family:Unbounded;font-size:15px}
+.mq{margin-top:110px;display:flex;gap:60px;white-space:nowrap;font-family:Unbounded;font-weight:700;font-size:54px;letter-spacing:-1px;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.35);padding-left:20px}
+.mq b{color:#F3CC02;-webkit-text-stroke:0}
+.sec{padding:120px 48px 0}
+.h2{font-family:Unbounded;font-weight:700;font-size:64px;letter-spacing:-2px;line-height:1;text-align:center}
+.h2 em{font-style:normal;background:linear-gradient(90deg,#FFE04A,#FF9A2A);-webkit-background-clip:text;color:transparent}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:270px;gap:18px;margin-top:56px}
+.t{border-radius:32px;position:relative;overflow:hidden;padding:26px}
+.ph{background-size:cover;background-position:center}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.6))}
+.lbl{position:absolute;left:22px;bottom:20px;z-index:2;font-weight:600;font-size:16px}
+.tag{position:absolute;right:18px;top:18px;z-index:2;border-radius:99px;padding:8px 14px;font-size:12px}
+.t1{grid-column:span 2;grid-row:span 2;background-image:url(img/232a9336.jpg)}
+.t2{background-image:url(img/d76b414f.jpg);background-position:center 30%}
+.t3{display:flex;flex-direction:column;justify-content:space-between}
+.t3 .n{font-family:Unbounded;font-weight:900;font-size:86px;letter-spacing:-4px;background:linear-gradient(180deg,#fff,rgba(255,255,255,.3));-webkit-background-clip:text;color:transparent}
+.t3 p{color:#B6B4C4;font-size:15px;line-height:1.5}
+.t4{background-image:url(img/a56d52aa.jpg)}
+.t5{grid-column:span 1;background:linear-gradient(135deg,#FFE04A,#F3CC02 45%,#FF9A2A);color:#09090E;display:flex;flex-direction:column;justify-content:space-between}
+.t5 h3{font-family:Unbounded;font-size:26px;line-height:1.1}.t5 .go{width:60px;height:60px;border-radius:50%;background:#09090E;color:#F3CC02;display:grid;place-items:center;font-size:26px;align-self:flex-end}
+.t6{grid-column:span 2;padding:0}
+.ba{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.ba .l{background:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 18px,rgba(255,255,255,.09) 18px 36px);display:grid;place-items:center;font-family:Unbounded;font-size:20px;color:#8E8C9C;text-align:center}
+.ba .r{background:url(img/160ece37.jpg) center 60%/cover}
+.knob{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px;border-radius:50%;z-index:3;display:grid;place-items:center;font-size:22px}
+.ba::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.7);z-index:2}
+.t7{grid-column:span 2;background-image:url(img/9c288397.jpg)}
+.final{margin:120px 48px 0;border-radius:44px;padding:90px 60px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:900px;height:400px;left:50%;top:-220px;margin-left:-450px;background:radial-gradient(closest-side,rgba(243,204,2,.55),transparent);}
+.final h2{font-family:Unbounded;font-weight:900;font-size:84px;letter-spacing:-3px;line-height:.98;position:relative}
+.final p{position:relative;color:#C9C7D6;font-size:19px;margin:22px 0 36px}
+.final .cta{position:relative;font-size:18px;padding:22px 38px;display:inline-block}
+footer{padding:60px 48px 50px;display:flex;justify-content:space-between;color:#76748A;font-size:14px}
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="noise"></div>
+<div class="z">
+<nav class="glass"><div class="logo"><span class="mark">С</span>Строй Комфорт</div><div class="menu"><span>Главная</span><span>Работы</span><span>Цены</span><span>Этапы</span><span>Контакты</span></div><span class="cta">Рассчитать ремонт</span></nav>
+<section class="hero"><span class="pill glass"><span class="live"></span>Ремонт под ключ · Краснодар <b>Смета за 60 сек</b></span>
+<div class="mega">РЕМОНТ</div>
+<div class="sub">который хочется <em>показывать гостям</em></div>
+<p class="lead">От черновой отделки до последней лампочки. Цена фиксируется в договоре, а каждый этап вы видите в телефоне.</p>
+<div class="row"><span class="cta">Узнать цену за 60 секунд →</span><span class="ghost glass">▶ Смотреть рум-тур</span></div></section>
+<div class="stage"><div class="shot"></div>
+<div class="fc glass f1"><small>Объект · ЖК «Образцово»</small><div class="big">Готово на 78%</div><div class="bar"><i></i></div><div class="row2"><span>Черновые</span><span>Чистовые</span><span>Мебель</span></div></div>
+<div class="fc glass f2"><div class="av"></div><div><b><span class="live"></span>Фотоотчёт загружен</b><span>Санузел · сегодня, 18:40</span></div></div>
+<div class="fc glass f3"><small>Калькулятор · шаг 1 из 5</small><div class="q">Какое у вас жильё?</div><div class="ch"><span class="on">Новостройка</span><span>Вторичка</span><span>Дом</span></div></div>
+<div class="fc glass f4"><b>▶ 0:43</b><span style="font-size:13px;color:#B6B4C4">рум-тур объекта</span></div></div>
+<div class="mq"><span>ЭЛЕКТРИКА</span><b>✦</b><span>САНТЕХНИКА</span><b>✦</b><span>ПЛИТКА</span><b>✦</b><span>СВЕТ</span><b>✦</b><span>МЕБЕЛЬ</span></div>
+<section class="sec"><div class="h2">Не обещаем — <em>показываем</em></div>
+<div class="bento">
+<div class="t ph t1"><span class="tag glass">ЖК «Образцово»</span><span class="lbl" style="font-size:20px">Спальня с акцентной стеной и треком света</span></div>
+<div class="t ph t2"><span class="lbl">Детская «Космос»</span></div>
+<div class="t glass t3"><div class="n">0 ₽</div><p>доплат сверх сметы — цена фиксируется в договоре</p></div>
+<div class="t ph t4"><span class="lbl">Ванная</span></div>
+<div class="t t5"><h3>Рассчитать свой ремонт</h3><span class="go">↗</span></div>
+<div class="t t6"><div class="ba"><div class="l">ваше фото<br>«до»</div><div class="r"></div></div><span class="knob glass">⇆</span><span class="tag glass" style="left:18px;right:auto">Было / стало</span></div>
+<div class="t ph t7"><span class="lbl">Шкаф-купе в нишу</span></div>
+</div></section>
+<div class="final glass"><h2>Заезжайте в готовую<br>квартиру через 45 дней</h2><p>5 вопросов — и точная смета у вас в Telegram или WhatsApp</p><span class="cta">Получить расчёт бесплатно →</span></div>
+<footer><span>© Строй Комфорт · Краснодар</span><span>Концепт D · «Аврора»</span></footer>
+</div></body></html>
