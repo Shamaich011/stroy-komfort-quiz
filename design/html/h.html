@@ -1,0 +1,72 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="fonts.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--m:#DCEAE2;--m2:#C3DCCF;--ink:#16211C;--y:#F3CC02;--mut:#5C6B63}
+body{background:#F4F8F5;color:var(--ink);font-family:Inter,sans-serif}
+.w{max-width:1320px;margin:0 auto;padding:0 32px}
+header{display:flex;justify-content:space-between;align-items:center;height:88px}
+.logo{font-family:Unbounded;font-weight:700;font-size:18px;display:flex;align-items:center;gap:10px}.logo i{width:36px;height:36px;border-radius:12px;background:var(--ink);display:grid;place-items:center;font-style:normal;color:var(--y);font-size:18px}
+.nav{background:#fff;border-radius:99px;padding:6px;display:flex;gap:4px;font-size:14px;font-weight:600;box-shadow:0 4px 20px rgba(22,33,28,.06)}.nav span{padding:10px 18px;border-radius:99px;color:var(--mut)}.nav span:first-child{background:var(--m);color:var(--ink)}
+.btn{background:var(--ink);color:#fff;border-radius:99px;padding:16px 24px;font-weight:700;font-size:15px;display:inline-flex;gap:10px;align-items:center}.btn i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center}
+.hero{background:var(--m);border-radius:44px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;position:relative;overflow:hidden;margin-top:6px}
+.hero::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:var(--m2);right:-120px;bottom:-220px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:99px;padding:8px 14px;font-size:13px;font-weight:600}.badge b{width:8px;height:8px;border-radius:50%;background:#18B26B}
+h1{font-family:Unbounded;font-weight:700;font-size:62px;line-height:1.06;letter-spacing:-2px;margin:22px 0 20px}
+h1 u{text-decoration:none;background:var(--y);border-radius:16px;padding:0 12px;display:inline-block;transform:rotate(-1.5deg)}
+.lead{font-size:18px;line-height:1.6;color:var(--mut);max-width:520px}
+.row{display:flex;gap:12px;margin-top:30px}.ghost{background:#fff;border-radius:99px;padding:16px 24px;font-weight:700;font-size:15px}
+.stats{display:flex;gap:12px;margin-top:40px}.stat{background:rgba(255,255,255,.7);border-radius:22px;padding:16px 20px}.stat b{font-family:Unbounded;font-size:22px;display:block}.stat span{font-size:13px;color:var(--mut)}
+.pics{position:relative;z-index:1;height:560px}
+.pc{position:absolute;border-radius:30px;background-size:cover;background-position:center;box-shadow:0 30px 60px rgba(22,33,28,.2)}
+.p1{left:0;top:0;width:58%;height:68%;background-image:url(img/7c98523a.jpg)}
+.p2{right:0;top:60px;width:40%;height:56%;background-image:url(img/d76b414f.jpg);background-position:center 25%}
+.p3{left:18%;bottom:0;width:52%;height:36%;background-image:url(img/a56d52aa.jpg);background-position:center 60%}
+.chip{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;font-weight:700;font-size:14px;box-shadow:0 14px 30px rgba(22,33,28,.15);z-index:2}
+.c1{right:20px;bottom:120px}.c2{left:-10px;top:52%}
+section{padding:100px 0 0}
+.hd{display:flex;justify-content:space-between;align-items:end;gap:30px}
+h2{font-family:Unbounded;font-weight:700;font-size:46px;letter-spacing:-1.5px;line-height:1.1}
+.hd p{color:var(--mut);max-width:420px;line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.cd{background:#fff;border-radius:30px;padding:26px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between}
+.ic{width:62px;height:62px;border-radius:20px;background:var(--m);display:grid;place-items:center;font-size:28px;box-shadow:inset 0 -6px 0 var(--m2)}
+.cd h3{font-size:19px}.cd p{color:var(--mut);font-size:14px;line-height:1.5;margin-top:6px}.cd .pr{font-weight:800;margin-top:14px}
+.cd.dk{background:var(--ink);color:#fff}.cd.dk p{color:#A9B7AF}.cd.dk .ic{background:var(--y);box-shadow:inset 0 -6px 0 #C9A800}
+.ba{margin-top:40px;border-radius:36px;overflow:hidden;height:520px;position:relative;display:grid;grid-template-columns:1fr 1fr}
+.ba .l{background:repeating-linear-gradient(45deg,#E6EFEA 0 20px,#EEF4F0 20px 40px);display:grid;place-items:center;font-family:Unbounded;color:#8FA398;font-size:22px;text-align:center}
+.ba .r{background:url(img/160ece37.jpg) center 55%/cover}
+.ba .k{position:absolute;left:50%;top:50%;width:70px;height:70px;margin:-35px;border-radius:50%;background:var(--y);border:6px solid #fff;display:grid;place-items:center;font-weight:900;z-index:2}
+.ba::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:6px;margin-left:-3px;background:#fff}
+.ba .t{position:absolute;top:20px;background:#fff;border-radius:99px;padding:8px 16px;font-weight:700;font-size:14px;z-index:2}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.r{background:#fff;border-radius:28px;padding:26px}.r .st{color:#E8B400;letter-spacing:2px}.r p{margin:14px 0 18px;line-height:1.6;color:#33413A}.r .who{display:flex;gap:12px;align-items:center;font-weight:700;font-size:14px}.r .who i{width:40px;height:40px;border-radius:50%;background:var(--m)}
+.cta{margin:100px 0 0;background:var(--ink);color:#fff;border-radius:44px;padding:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+.cta h2{font-size:46px}.cta p{color:#A9B7AF;margin-top:12px;font-size:17px}
+.form{background:#fff;border-radius:26px;padding:22px;color:var(--ink)}.in{border:1.5px solid #E3EAE6;border-radius:14px;padding:16px;color:#8A968F;margin-bottom:10px;font-size:15px}.form .btn{width:100%;justify-content:center;background:var(--y);color:var(--ink)}
+footer{padding:50px 0;display:flex;justify-content:space-between;color:var(--mut);font-size:14px}
+.bar{display:none}
+@media(max-width:600px){
+.w{padding:0 14px}.nav,.hb{display:none}header{height:64px}
+.hero{grid-template-columns:1fr;padding:26px 20px;border-radius:30px;gap:24px}
+h1{font-size:32px;letter-spacing:-1px}.lead{font-size:16px}.row{flex-direction:column}.row span{justify-content:center;text-align:center}
+.stats{flex-wrap:wrap}.stat{flex:1 1 40%}.pics{height:340px}.c2{display:none}
+section{padding:56px 0 0}.hd{flex-direction:column;align-items:flex-start;gap:10px}h2{font-size:27px}
+.cards{grid-template-columns:1fr 1fr;gap:10px}.cd{padding:18px;min-height:200px;border-radius:24px}.ic{width:48px;height:48px;font-size:22px}.cd h3{font-size:16px}
+.ba{height:300px;border-radius:26px}.ba .l{font-size:15px}
+.rv{grid-template-columns:1fr}.cta{grid-template-columns:1fr;padding:26px;border-radius:30px}.cta h2{font-size:27px}
+footer{flex-direction:column;gap:8px;padding:30px 0 100px}
+.bar{display:flex;gap:8px;position:fixed;left:12px;right:12px;bottom:12px;background:var(--ink);border-radius:99px;padding:8px}
+.bar span{flex:1;text-align:center;color:#fff;font-weight:700;font-size:14px;padding:14px 0;border-radius:99px}.bar span:last-child{background:var(--y);color:var(--ink);flex:1.4}
+}
+</style></head><body>
+<div class="w"><header><div class="logo"><i>С</i>Строй Комфорт</div><nav class="nav"><span>Главная</span><span>Услуги</span><span>Цены</span><span>Работы</span><span>FAQ</span></nav><span class="btn hb">+7 900 000 00 00 <i>↗</i></span></header>
+<div class="hero"><div style="position:relative;z-index:1"><span class="badge"><b></b>Принимаем заявки · Краснодар</span><h1>Ремонт квартир <u>под ключ</u> в Краснодаре</h1><p class="lead">Уютные квартиры без стресса: одна команда, одна смета, один ответственный прораб. Вы заняты своими делами — мы присылаем фото.</p><div class="row"><span class="btn">Рассчитать стоимость <i>→</i></span><span class="ghost">Смотреть работы</span></div>
+<div class="stats"><div class="stat"><b>Смета</b><span>в договоре</span></div><div class="stat"><b>Фото</b><span>каждый день</span></div><div class="stat"><b>Гарантия</b><span>на работы</span></div></div></div>
+<div class="pics"><div class="pc p1"></div><div class="pc p2"></div><div class="pc p3"></div><div class="chip c1">✨ ЖК «Образцово» · сдан</div><div class="chip c2">📸 Фотоотчёт загружен</div></div></div>
+<section><div class="hd"><h2>Услуги и цены</h2><p>Цены за м² с работой. Точную смету пришлём после бесплатного замера.</p></div>
+<div class="cards"><div class="cd"><div class="ic">🛋️</div><div><h3>Под ключ</h3><p>От стяжки до мебели и света</p><div class="pr">от X XXX ₽/м²</div></div></div><div class="cd"><div class="ic">🛁</div><div><h3>Санузел</h3><p>Плитка, инсталляция, тёплый пол</p><div class="pr">от XXX XXX ₽</div></div></div><div class="cd"><div class="ic">🎨</div><div><h3>Косметический</h3><p>Стены, пол, потолок</p><div class="pr">от X XXX ₽/м²</div></div></div><div class="cd dk"><div class="ic">📐</div><div><h3>Бесплатный замер</h3><p>Приедем и посчитаем за 1 день</p><div class="pr" style="color:#F3CC02">Записаться →</div></div></div></div></section>
+<section><div class="hd"><h2>Было → стало</h2><p>Потяните ползунок, чтобы сравнить. Все фото — наши реальные объекты.</p></div><div class="ba"><div class="l">ваше фото<br>«до ремонта»</div><div class="r"></div><span class="k">⇆</span><span class="t" style="left:20px">Было</span><span class="t" style="right:20px">Стало</span></div></section>
+<section><div class="hd"><h2>Отзывы клиентов</h2><p>Публикуем отзывы с Яндекс Карт и 2ГИС.</p></div><div class="rv"><div class="r"><div class="st">★★★★★</div><p>Здесь будет реальный отзыв клиента — 2–3 предложения о сроках и результате.</p><div class="who"><i></i>Имя клиента · ЖК</div></div><div class="r"><div class="st">★★★★★</div><p>Здесь будет реальный отзыв клиента — 2–3 предложения о сроках и результате.</p><div class="who"><i></i>Имя клиента · ЖК</div></div><div class="r"><div class="st">★★★★★</div><p>Здесь будет реальный отзыв клиента — 2–3 предложения о сроках и результате.</p><div class="who"><i></i>Имя клиента · ЖК</div></div></div></section>
+<div class="cta"><div><h2>Посчитаем ваш ремонт бесплатно</h2><p>Перезвоним за 15 минут в рабочее время</p></div><div class="form"><div class="in">Ваше имя</div><div class="in">+7 (___) ___-__-__</div><span class="btn">Получить смету <i>→</i></span></div></div>
+<footer><span>© Строй Комфорт · Краснодар</span><span>Вариант H · «Мятный софт»</span></footer></div>
+<div class="bar"><span>📞</span><span>WhatsApp</span><span>Расчёт</span></div>
+</body></html>

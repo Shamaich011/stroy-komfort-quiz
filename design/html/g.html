@@ -1,0 +1,70 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="fonts.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E13;color:#fff;font-family:Inter,sans-serif}
+.hero{position:relative;min-height:900px;background:url(img/232a9336.jpg) center/cover;display:flex;flex-direction:column}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,19,.92) 0%,rgba(14,14,19,.65) 45%,rgba(14,14,19,.15) 100%),linear-gradient(0deg,#0E0E13 0%,transparent 30%)}
+.in{position:relative;max-width:1320px;margin:0 auto;padding:0 40px;width:100%}
+header{display:flex;justify-content:space-between;align-items:center;height:90px}
+.logo{font-family:Unbounded;font-weight:700;font-size:18px}.logo b{color:#F3CC02}
+.nav{display:flex;gap:30px;font-size:15px;color:#D6D5DE}
+.tel{font-weight:700;font-size:15px;border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 18px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;flex:1;padding:60px 0 100px}
+.kick{display:inline-flex;gap:10px;align-items:center;font-size:14px;color:#F3CC02;font-weight:600;letter-spacing:2px;text-transform:uppercase}.kick i{width:30px;height:2px;background:#F3CC02}
+h1{font-family:Unbounded;font-weight:700;font-size:70px;line-height:1.03;letter-spacing:-2px;margin:20px 0 22px}
+h1 span{color:#F3CC02}
+.lead{font-size:19px;line-height:1.6;color:#D6D5DE;max-width:560px}
+.ticks{display:flex;gap:22px;margin-top:30px;font-size:15px;color:#fff;font-weight:600}.ticks span::before{content:"✓";color:#F3CC02;margin-right:8px;font-weight:900}
+.quiz{background:rgba(255,255,255,.96);color:#14141C;border-radius:28px;padding:30px;box-shadow:0 40px 90px rgba(0,0,0,.5)}
+.prog{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#777}.pb{height:6px;background:#EEE;border-radius:6px;margin:10px 0 22px}.pb i{display:block;width:20%;height:100%;background:#F3CC02;border-radius:6px}
+.quiz h3{font-family:Unbounded;font-size:22px;margin-bottom:16px}
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.op{border:2px solid #ECECEC;border-radius:16px;padding:14px;font-weight:600;font-size:15px}
+.op .im{height:86px;border-radius:10px;background-size:cover;background-position:center;margin-bottom:10px}
+.op.on{border-color:#14141C;background:#FFFBE3}
+.next{margin-top:16px;background:#14141C;color:#F3CC02;text-align:center;border-radius:14px;padding:17px;font-weight:800}
+.gift{margin-top:12px;text-align:center;font-size:13px;color:#555}
+.logos{position:relative;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);padding:26px 0;color:#B9B8C6;font-size:15px}
+.logos b{color:#fff;font-size:22px;font-family:Unbounded;display:block}
+section{max-width:1320px;margin:0 auto;padding:110px 40px 0}
+h2{font-family:Unbounded;font-size:50px;letter-spacing:-1.5px;line-height:1.08}h2 span{color:#F3CC02}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.sv{border-radius:26px;overflow:hidden;background:#17171F;border:1px solid #24242F}
+.sv .im{height:240px;background-size:cover;background-position:center}
+.sv .tx{padding:24px}.sv h3{font-size:22px}.sv p{color:#A8A7B6;margin:10px 0 18px;line-height:1.55}.sv .pr{display:flex;justify-content:space-between;align-items:center;font-weight:700}.sv .pr span{color:#F3CC02}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;position:relative}
+.steps::before{content:"";position:absolute;left:30px;right:30px;top:30px;height:2px;background:repeating-linear-gradient(90deg,#F3CC02 0 10px,transparent 10px 20px)}
+.sp{position:relative;padding-right:30px}.sp .n{width:60px;height:60px;border-radius:50%;background:#F3CC02;color:#14141C;display:grid;place-items:center;font-family:Unbounded;font-weight:700;font-size:20px}
+.sp h3{font-size:20px;margin:20px 0 8px}.sp p{color:#A8A7B6;line-height:1.55}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.fq{background:#17171F;border:1px solid #24242F;border-radius:20px;padding:24px;font-weight:600;font-size:17px;display:flex;justify-content:space-between}
+.fq i{font-style:normal;color:#F3CC02}
+.end{margin:110px auto 0;max-width:1240px;border-radius:34px;background:linear-gradient(120deg,#F3CC02,#FFB020);color:#14141C;padding:60px;display:flex;justify-content:space-between;align-items:center}
+.end h2 span{color:#14141C}.end .b{background:#14141C;color:#fff;border-radius:16px;padding:22px 34px;font-weight:800;font-size:17px}
+footer{max-width:1320px;margin:0 auto;padding:50px 40px;color:#7F7E8D;font-size:14px;display:flex;justify-content:space-between}
+.bar{display:none}
+@media(max-width:600px){
+.in{padding:0 18px}.nav{display:none}.tel{padding:9px 12px;font-size:13px}header{height:64px}
+.hero{min-height:auto;background-position:65% center}.hero::before{background:linear-gradient(180deg,rgba(14,14,19,.55),rgba(14,14,19,.85) 55%,#0E0E13)}
+.grid{grid-template-columns:1fr;gap:26px;padding:30px 0 40px}
+h1{font-size:34px;letter-spacing:-1px}.lead{font-size:16px}.ticks{flex-direction:column;gap:8px;margin-top:20px}
+.quiz{padding:20px}.op .im{height:64px}.quiz h3{font-size:18px}
+.logos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+section{padding:60px 18px 0}h2{font-size:28px}
+.svc,.faq{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr;gap:26px}.steps::before{display:none}
+.end{margin:60px 18px 0;padding:28px;flex-direction:column;align-items:flex-start;gap:20px}
+footer{flex-direction:column;gap:8px;padding:30px 18px 100px}
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;background:#0E0E13;padding:10px;border-top:1px solid #24242F}
+.bar span{text-align:center;padding:15px;border-radius:14px;font-weight:800;font-size:15px;background:#1E1E28}.bar span:last-child{background:#F3CC02;color:#14141C}
+}
+</style></head><body>
+<div class="hero"><div class="in"><header><div class="logo">СТРОЙ <b>КОМФОРТ</b></div><nav class="nav"><span>Услуги</span><span>Цены</span><span>Работы</span><span>Отзывы</span><span>Контакты</span></nav><span class="tel">+7 900 000 00 00</span></header>
+<div class="grid"><div><span class="kick"><i></i>Краснодар и пригород</span><h1>Ремонт квартир под ключ <span>без доплат</span> и срывов сроков</h1><p class="lead">Новостройки и вторичка. Цена фиксируется в договоре, а прогресс вы видите каждый день по фотоотчёту.</p><div class="ticks"><span>Бесплатный замер</span><span>Смета за 1 день</span><span>Гарантия</span></div></div>
+<div class="quiz"><div class="prog"><span>Расчёт стоимости</span><span>Шаг 1 из 5</span></div><div class="pb"><i></i></div><h3>Какой ремонт нужен?</h3><div class="ops"><div class="op on"><div class="im" style="background-image:url(img/7c98523a.jpg)"></div>Под ключ</div><div class="op"><div class="im" style="background-image:url(img/a56d52aa.jpg)"></div>Только санузел</div><div class="op"><div class="im" style="background-image:url(img/f325e595.jpg)"></div>Косметический</div><div class="op"><div class="im" style="background-image:url(img/160ece37.jpg)"></div>Капитальный</div></div><div class="next">Далее →</div><div class="gift">🎁 После расчёта — чек-лист приёмки квартиры</div></div></div>
+<div class="logos"><span><b>Смета</b>фиксируется в договоре</span><span><b>Каждый день</b>фотоотчёт с объекта</span><span><b>1 прораб</b>на весь объект</span><span><b>Гарантия</b>на все работы</span></div></div></div>
+<section><h2>Услуги и <span>цены</span></h2><div class="svc"><div class="sv"><div class="im" style="background-image:url(img/232a9336.jpg)"></div><div class="tx"><h3>Ремонт под ключ</h3><p>От стяжки до мебели и света. Вы заезжаете в готовую квартиру.</p><div class="pr">от X XXX ₽/м² <span>→</span></div></div></div><div class="sv"><div class="im" style="background-image:url(img/275e399a.jpg)"></div><div class="tx"><h3>Ремонт санузла</h3><p>Плитка, инсталляция, тёплый пол, гидроизоляция.</p><div class="pr">от XXX XXX ₽ <span>→</span></div></div></div><div class="sv"><div class="im" style="background-image:url(img/9c288397.jpg)"></div><div class="tx"><h3>Косметический</h3><p>Обновить стены, пол, потолок и свет без грязи.</p><div class="pr">от X XXX ₽/м² <span>→</span></div></div></div></div></section>
+<section><h2>Как мы <span>работаем</span></h2><div class="steps"><div class="sp"><div class="n">1</div><h3>Замер</h3><p>Бесплатно приезжаем и обсуждаем задачу.</p></div><div class="sp"><div class="n">2</div><h3>Смета</h3><p>Фиксируем цену и сроки в договоре.</p></div><div class="sp"><div class="n">3</div><h3>Ремонт</h3><p>Фотоотчёт каждый день, прораб на связи.</p></div><div class="sp"><div class="n">4</div><h3>Сдача</h3><p>Принимаете по чек-листу и заселяетесь.</p></div></div></section>
+<section><h2>Частые <span>вопросы</span></h2><div class="faq"><div class="fq">Сколько стоит ремонт однушки в Краснодаре? <i>+</i></div><div class="fq">Сколько длится ремонт под ключ? <i>+</i></div><div class="fq">Можно жить в квартире во время ремонта? <i>+</i></div><div class="fq">Как оплачивать — сразу или по этапам? <i>+</i></div></div></section>
+<div class="end"><h2>Получите смету <span>за 1 минуту</span></h2><span class="b">Рассчитать бесплатно →</span></div>
+<footer><span>© Строй Комфорт · Краснодар</span><span>Вариант G · «Кино»</span></footer>
+<div class="bar"><span>📞 Позвонить</span><span>Рассчитать</span></div>
+</body></html>
