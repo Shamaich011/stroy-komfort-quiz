@@ -1,0 +1,57 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><link rel="stylesheet" href="fonts.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;background:#F2F0EA;color:#111117;font-family:Inter,sans-serif;overflow:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;padding:30px 44px}
+.logo{font-family:Unbounded;font-weight:900;font-size:22px;letter-spacing:-.5px}.logo i{font-style:normal;color:#F3CC02;-webkit-text-stroke:1px #111}
+.menu{display:flex;gap:30px;font-weight:500;font-size:15px}
+.pillb{background:#111117;color:#fff;border-radius:99px;padding:15px 24px;font-weight:600;font-size:15px;display:inline-flex;gap:10px;align-items:center}
+.pillb i{font-style:normal;width:26px;height:26px;border-radius:50%;background:#F3CC02;color:#111;display:grid;place-items:center;font-size:14px}
+.mega{font-family:Unbounded;font-weight:900;font-size:172px;line-height:.86;letter-spacing:-8px;padding:20px 36px 0;position:relative}
+.mega .y{display:inline-block;background:#F3CC02;border-radius:120px;padding:0 40px 18px;transform:rotate(-2deg);margin-left:-10px}
+.mega .img{display:inline-block;width:250px;height:132px;border-radius:99px;background:url(img/a56d52aa.jpg) center 70%/cover;vertical-align:middle;margin:0 10px;transform:translateY(-14px)}
+.heroRow{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;padding:40px 44px 0;align-items:end}
+.lead{font-size:22px;line-height:1.5;font-weight:500;max-width:520px}
+.btns{display:flex;gap:12px;margin-top:30px}
+.big{background:#111117;color:#F3CC02;font-family:Unbounded;font-weight:700;font-size:17px;border-radius:99px;padding:24px 34px}
+.out{border:2px solid #111;border-radius:99px;padding:22px 30px;font-weight:700;font-size:16px}
+.hphoto{height:560px;border-radius:44px;background:url(img/232a9336.jpg) center/cover;position:relative}
+.stk{position:absolute;background:#fff;border-radius:22px;padding:16px 20px;box-shadow:0 24px 50px rgba(0,0,0,.18);font-weight:700}
+.s1{left:-40px;top:60px;transform:rotate(-5deg);display:flex;gap:12px;align-items:center}.s1 span{font-size:30px}
+.s2{right:30px;bottom:-30px;background:#F3CC02;transform:rotate(4deg);font-family:Unbounded;font-size:20px;line-height:1.1;padding:22px 24px}
+.s3{right:40px;top:36px;background:#111;color:#fff;font-size:14px;border-radius:99px;padding:12px 18px}
+.circ{position:absolute;left:44%;bottom:-60px;width:150px;height:150px;border-radius:50%;background:#111;color:#F3CC02;display:grid;place-items:center;font-family:Unbounded;font-size:13px;text-align:center;line-height:1.3;border:8px solid #F2F0EA}
+.sec{padding:140px 44px 0}
+.hd{display:flex;justify-content:space-between;align-items:end}
+h2{font-family:Unbounded;font-weight:900;font-size:92px;line-height:.95;letter-spacing:-3px}
+h2 span{background:#F3CC02;border-radius:30px;padding:0 22px 8px;display:inline-block;transform:rotate(-1.5deg)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.c{border-radius:34px;height:420px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.c .cap{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-radius:22px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center}
+.cap b{font-size:16px}.cap small{display:block;color:#666;font-size:13px;font-weight:500;margin-top:3px}.cap i{font-style:normal;width:40px;height:40px;border-radius:50%;background:#111;color:#F3CC02;display:grid;place-items:center}
+.c:nth-child(2){transform:translateY(40px)}.c:nth-child(4){transform:translateY(40px)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+.st{background:#fff;border-radius:34px;padding:34px;min-height:300px;position:relative}
+.st .n{font-family:Unbounded;font-weight:900;font-size:110px;line-height:.8;letter-spacing:-6px;color:#ECE9DF}
+.st h3{font-family:Unbounded;font-size:24px;margin-top:24px}.st p{color:#5A5A66;margin-top:10px;line-height:1.55}
+.st.on{background:#111;color:#fff}.st.on .n{color:#F3CC02}.st.on p{color:#B8B8C4}
+.quiz{margin:140px 44px 0;background:#F3CC02;border-radius:50px;padding:70px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;overflow:hidden}
+.quiz h2{font-size:76px;letter-spacing:-4px}
+.qcard{background:#fff;border-radius:34px;padding:34px;box-shadow:0 30px 60px rgba(0,0,0,.15);transform:rotate(2deg)}
+.prog{display:flex;gap:6px;margin-bottom:22px}.prog i{flex:1;height:6px;border-radius:6px;background:#EEE}.prog i.on{background:#111}
+.qcard h4{font-family:Unbounded;font-size:24px;margin-bottom:18px}
+.op{border:2px solid #EEE;border-radius:18px;padding:18px 20px;font-weight:600;margin-top:10px;display:flex;justify-content:space-between}.op.on{border-color:#111;background:#FFF8D1}
+.giant{font-family:Unbounded;font-weight:900;font-size:228px;letter-spacing:-12px;text-align:center;line-height:.8;padding:120px 20px 0;color:#111;white-space:nowrap}
+footer{display:flex;justify-content:space-between;padding:30px 44px 40px;font-size:14px;color:#777}
+</style></head><body>
+<nav><div class="logo">СТРОЙ<i>●</i>КОМФОРТ</div><div class="menu"><span>Работы</span><span>Цены</span><span>Как работаем</span><span>Отзывы</span></div><span class="pillb">+7 900 000 00 00 <i>↗</i></span></nav>
+<div class="mega">РЕМОНТ<span class="img"></span><br><span class="y">ПОД КЛЮЧ</span></div>
+<div class="heroRow"><div><p class="lead">Делаем квартиры в Краснодаре, в которые заезжают с одним чемоданом. Смета в договоре, фотоотчёт каждый день, гарантия на работы.</p><div class="btns"><span class="big">Рассчитать за 60 сек →</span><span class="out">Наши работы</span></div></div>
+<div class="hphoto"><div class="stk s1"><span>📸</span><div>Фотоотчёт<br><small style="font-weight:500;color:#777">каждый вечер</small></div></div><div class="stk s3">● ЖК «Образцово» · сдан</div><div class="stk s2">Смета<br>не растёт</div><div class="circ">СМОТРЕТЬ<br>РУМ-ТУР ▶</div></div></div>
+<section class="sec"><div class="hd"><h2>Свежие<br><span>объекты</span></h2><span class="pillb">Все работы <i>→</i></span></div>
+<div class="cards"><div class="c" style="background-image:url(img/7c98523a.jpg)"><div class="cap"><div><b>Кухня</b><small>Фартук-кирпичик</small></div><i>↗</i></div></div><div class="c" style="background-image:url(img/d76b414f.jpg);background-position:center 30%"><div class="cap"><div><b>Детская</b><small>Космос + люстра-луна</small></div><i>↗</i></div></div><div class="c" style="background-image:url(img/160ece37.jpg)"><div class="cap"><div><b>Прихожая</b><small>Шкаф в цвет стены</small></div><i>↗</i></div></div><div class="c" style="background-image:url(img/275e399a.jpg)"><div class="cap"><div><b>Ванная</b><small>Душевая стойка</small></div><i>↗</i></div></div></div></section>
+<section class="sec"><h2>Как <span>работаем</span></h2><div class="steps"><div class="st"><div class="n">01</div><h3>Замер</h3><p>Приезжаем бесплатно, обсуждаем задачу и бюджет.</p></div><div class="st"><div class="n">02</div><h3>Смета</h3><p>Фиксируем цену и сроки в договоре.</p></div><div class="st on"><div class="n">03</div><h3>Ремонт</h3><p>Фото каждый день. Прораб на связи в мессенджере.</p></div><div class="st"><div class="n">04</div><h3>Ключи</h3><p>Принимаете работу — и заселяетесь.</p></div></div></section>
+<div class="quiz"><div><h2>Сколько<br>стоит<br>ваш ремонт?</h2><p style="font-size:20px;margin-top:22px;font-weight:500">5 вопросов — расчёт у вас в мессенджере.</p></div>
+<div class="qcard"><div class="prog"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><h4>Площадь квартиры?</h4><div class="op">до 40 м²<span>○</span></div><div class="op on">40–70 м²<span>●</span></div><div class="op">70–100 м²<span>○</span></div><div class="op">больше 100 м²<span>○</span></div></div></div>
+<div class="giant">КОМФОРТ</div>
+<footer><span>© Строй Комфорт · Краснодар</span><span>Концепт E · «Журнал»</span></footer>
+</body></html>
